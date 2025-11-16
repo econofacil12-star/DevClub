@@ -109,3 +109,7 @@ button.delet:hover {
     text-decoration: line-through;
 }
 
+.hidden{
+    display: none;
+}
+

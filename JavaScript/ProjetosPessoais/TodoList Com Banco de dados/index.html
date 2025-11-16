@@ -11,22 +11,21 @@
     <div id="head">
         <h1>To Do List</h1>
         <section>
-            <button id="add" onclick="addButton()">adicionar</button>
+            <button id="add" onclick="addTask()">adicionar</button>
             <input type="text" name="text" id="text" placeholder="digite sua tarefa" autocomplete="off">
             <select name="list" id="list">
+                <option value="all">Todas as Tarefas</option>
                 <option value="completed">Tarefas Concluidas</option>
                 <option value="pending">Tarefas Pendentes</option>
-                <option value="all">Todas as Tarefas</option>
+            </select>
         </section>
-        </select>
+        
     </div>
 
     <div id="tasks">
         <ul id="unorderList"></ul>
     </div>
 
-
-    <script src="server.js"></script>
     <script src="scripts.js"></script>
 </body>
 </html>
