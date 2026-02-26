@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    background: #0b0b12;
+    background-image: url("imagens/fundo\ do\ site.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* MAIN */
+main {
+    width: 90%;
+    max-width: 900px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(20, 20, 35, 0.85);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 40px rgba(239, 238, 240, 0.103);
+}
+
+/* TITLES */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+h1 span {
+    color: #7dffb3;
+}
+
+h2 {
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: #cfcfcf;
+}
+
+/* CONVERSOR */
+#conversor-region {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* CAIXAS DE MOEDA */
+#moeda1,
+#moeda2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #151528;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(128, 0, 255, 0.2);
+    transition: 0.3s ease;
+}
+
+#moeda1:hover,
+#moeda2:hover {
+    border: 1px solid #7dffb3;
+    box-shadow: 0 0 15px rgba(125, 255, 179, 0.2);
+}
+
+/* INPUT VALOR */
+input[type="text"] {
+    width: 120px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #7dffb3;
+    background: #0f0f1a;
+    color: white;
+    outline: none;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+/* Remove setinhas em alguns navegadores */
+input[type="text"]::-webkit-outer-spin-button,
+input[type="text"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* FOCUS */
+input[type="text"]:focus {
+    border-color: #8a2be2;
+    box-shadow: 0 0 10px rgba(1, 1, 102, 0.6);
+}
+
+/* SELECT */
+select {
+    background: #0f0f1a;
+    color: white;
+    border: 1px solid #7dffb3;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+}
+
+select:hover {
+    background: #1c1c30;
+}
+
+/* TAXA + BOTÃO */
+#conversor-region > div:last-child {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#conversor-region > div:last-child h3 {
+    margin-bottom: 20px;
+    color: #b0b0ff;
+}
+
+/* BOTÃO */
+button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #7dffb3;
+    color: #0b0b12;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 45px rgba(224, 224, 224, 0.233);
+}
+
+/* RESPONSIVO */
+@media (max-width: 800px) {
+    main {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #moeda1,
+    #moeda2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        text-align: center;
+    }
+}

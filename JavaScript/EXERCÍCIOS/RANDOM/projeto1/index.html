@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Contador Online</h1>
+
+    <div>
+        <div id="text">
+            <input type="text" name="dez-hour" id="dez-hour" value="00:00:00">
+        </div>
+        <div id="buttons">
+            <button id="start">Iniciar</button>
+            <button id="stop">Parar</button>
+            <button id="restart">Zerar</button>
+        </div>
+
+        <p></p>
+    </div>
+
+
+    <script>
+
+
+        let dez_hour = document.getElementById('dez-hour')
+      
+        let start_button = document.getElementById('start')
+        let stop_button = document.getElementById('stop')
+        let restart_button = document.getElementById('restart')
+        let resp = document.querySelector('p')
+
+        let time = 0
+        let interval = null;
+
+
+        start_button.addEventListener('click', function(){
+
+            
+            if (time === 0){
+            let timeConvert = dez_hour.value
+            
+            let [horasToConvert, minutosToConvert, segundosToConvert] = timeConvert.split(':').map(Number); 
+
+            time =(horasToConvert*3600) + (minutosToConvert*60) + segundosToConvert;
+            }
+
+            if(interval !== null) return;
+
+           interval =  setInterval(() => {
+
+                if(time <= 0){
+                    clearInterval(interval);
+                    interval = null
+                    return;
+                }
+                time--;
+
+                    let horas = Math.floor(time/3600)
+                    let minutos = Math.floor((time%3600)/60)
+                    let segundos = Math.floor(time%60)
+
+                    let h = String(horas).padStart(2, '0');
+                    let m = String(minutos).padStart(2, '0');
+                    let s = String(segundos).padStart(2, '0');
+
+                resp.innerHTML = `${h}:${m}:${s}`
+              
+            }, 1000);
+        })
+
+        restart_button.addEventListener('click', function(){
+            clearInterval(interval);
+            interval = null
+            time = 0;
+            dez_hour.value = "00:00:00"
+            resp.innerHTML = "00:00:00"
+        })
+
+
+        stop_button.addEventListener('click', function(){
+            clearInterval(interval)
+            interval = null
+        })
+        
+
+    </script>
+</body>
+</html>

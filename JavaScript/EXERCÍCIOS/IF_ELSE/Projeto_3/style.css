@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(68, 68, 68);
+}
+
+h1 {
+    color: rgb(146, 214, 146);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-size: 1.5em;
+    padding-bottom: 50px;
+
+}
+
+div#itens {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+select#item1, select#item2, select#item3, select#item4, select#item5{
+    border-radius: 5px;
+    height: 20px;
+    width: 150px;
+    outline: none;
+    text-align: center;
+    background-color: rgb(214, 145, 214);
+    color: rgba(0, 0, 0, 0.733);
+    font-weight: bold;
+}
+
+div#localDeEntrega {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+select#cidade {
+    background-color: rgb(240, 172, 46);
+    width: 200px;
+    font-weight: bolder;
+    text-align: center;
+    border-radius: 50px;
+    height: 20px;
+    outline: none;
+}
+
+button {
+    margin-left: 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+    background-color: rgb(165, 245, 165);
+    cursor: pointer;
+    
+}
+
+h2 {
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}

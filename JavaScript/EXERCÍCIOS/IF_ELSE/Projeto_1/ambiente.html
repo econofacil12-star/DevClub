@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Notas</title>
+    <style>
+        body {
+            background-color: rgb(73, 73, 73);
+            margin: 0px;
+        }
+
+        h1 {
+            color: antiquewhite;
+            margin-left: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        ul {
+            list-style: none;
+            color: white;
+            font-size: 1.3em;
+            margin-left: -5px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: white;
+            margin-left: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+
+        input {
+            background-color: rgba(190, 180, 150, 0.247);
+            border: 0px 0px 0px 0px ;
+            outline: none;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-left: 10px;
+            width: 80px;
+            border-radius: 5px;
+
+        }
+
+        button {
+            margin-left: 30px;
+            height: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+        button:hover {
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Nota do aluno</h1>
+
+    <ul>
+        <li>Nota 1º Bimestre <input type="text" name="nota1" id="nota1" autocomplete="off"></li>
+        <li>Nota 2º Bimestre <input type="text" name="nota2" id="nota2" autocomplete="off"></li>
+        <li>Nota 3º Bimestre <input type="text" name="nota3" id="nota3" autocomplete="off"></li>
+        <li>Nota 4º Bimestre <input type="text" name="nota4" id="nota4" autocomplete="off"></li>
+    </ul>
+
+    <button onclick="pesquisar()">Pesquisar</button>
+
+    <h2></h2>
+
+
+    <script src="if_else.js"></script>
+    
+</body>
+</html>
