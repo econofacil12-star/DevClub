@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jo Ken Po</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>JoKenPô</h1>
+    
+    <div class="options">
+        <div id="rock" class="option" onclick="humamScore('rock')">&#128074;</div>
+        <div id="paper" class="option" onclick="humamScore('paper')">&#9995;</div>
+        <div id="tesor" class="option" onclick="humamScore('tesor')">&#9996;</div> </div>
+
+    <div class="score-board">
+        <div id="myresult">Você: <span id="score_myresult">0</span></div>
+        <div id="machineresult">Máquina: <span id="score_machineresult">0</span></div>
+    </div>
+
+    <p id="result-message">Escolha uma opção para começar!</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

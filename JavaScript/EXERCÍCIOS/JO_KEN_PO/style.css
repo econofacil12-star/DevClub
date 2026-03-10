@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* Estilo Global */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Principal */
+.container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* Estilo das opções (Rock, Paper, Scissors) */
+.options {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.option {
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.option:hover {
+    transform: scale(1.2);
+    background-color: #e8e8e8;
+}
+
+/* Resultados */
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+#result-message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    background: #e7f3ff;
+    border-radius: 8px;
+}
